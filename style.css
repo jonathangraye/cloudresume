@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #404040;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0%
+}
+
+.header-links-center {
+}
+.header-links-right {
+
+}
+.link-nav-1 {
+padding-inline: 0.5em;
+font-size: 1.125em
+}
+
+.link-nav-1 {
+    colour: --black22
+}
+
+a:link{
+    color: #ff66c4;
+    text-decoration: none 
+
+
+}
+a:visited {
+    color: #ff66c4;
+    text-decoration: none 
+}
+
+.header-links-center a:hover {
+    transition: 0.3s;
+    text-decoration: underline;
+}
+.logo {
+    margin-right: auto;
+    align-items: center;
+    cursor: pointer;
+    width: auto;
+    display: flex;
+    max-width: 10rem;
+}
+.navigation{
+    background-color: #404040;
+}
