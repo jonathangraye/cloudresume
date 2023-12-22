@@ -26,8 +26,8 @@ body {
 
 
 .link-nav-1 {
-padding-inline: 0.5em;
-font-size: 1.125em
+    padding-inline: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .link-nav-1 {
@@ -70,6 +70,12 @@ a:visited {
     display: flex;
 	justify-content: right;
 	align-items: center;
+}
+
+.nav-icon {
+    max-width: 3rem;
+    max-height: 3rem;
+    padding-inline: 0.05rem;
 }
 
 a:hover {
