@@ -1,3 +1,9 @@
+@media only screen and (max-width: 500px){
+    .link-nav-1{ 
+       display: none
+     }
+  }
+
 html {
     height: 100%
 }
@@ -77,9 +83,20 @@ a:visited {
     max-height: 3rem;
     padding-inline: 0.05rem;
 }
+.nav-icon:hover {
+    filter: invert();
+    transition-duration: 0.5s;
+}
 
 a:hover {
-    color: black;
-    transition-duration: 0.5s;
+    color: #ffffff;
+    transition-duration: 0.3s;
 
+}
+
+/* in case I want to add in svg stylings later
+svg {
+    max-width: 3rem;
+    max-height: 3rem;
+    padding-inline: 0.05rem;
 }
