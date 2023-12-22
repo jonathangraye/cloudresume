@@ -30,6 +30,10 @@ body {
     height: 100%
 }
 
+h1 {
+    text-align: center;
+}
+
 
 .link-nav-1 {
     padding-inline: 0.5rem;
@@ -91,8 +95,15 @@ a:visited {
 a:hover {
     color: #ffffff;
     transition-duration: 0.3s;
-
 }
+
+.footer-section {
+    background-color: #ff00ff;
+    height: 4rem;
+    position: sticky;
+    top: 100%
+}
+
 
 /* in case I want to add in svg stylings later
 svg {
