@@ -29,4 +29,4 @@ jobs:
       # Hello from AWS: WhoAmI
       - name: s3syncall
         run: |
-            aws s3 sync ${SOURCE_DIR:-.} s3://www.graye.co.uk/ --delete --exclude '.git/*'
+            aws s3 sync ${SOURCE_DIR:-.} s3://www.graye.co.uk/ --delete --exclude '.github/*'
