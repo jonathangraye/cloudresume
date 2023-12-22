@@ -29,4 +29,4 @@ jobs:
       # Hello from AWS: WhoAmI
       - name: s3syncall
         run: |
-            aws s3 sync jonathangraye/cloudresume arn:aws:s3:::www.graye.co.uk --delete
+            aws s3 sync build s3://www.graye.co.uk/ --delete
