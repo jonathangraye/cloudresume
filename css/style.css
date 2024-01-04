@@ -58,7 +58,7 @@ a:visited {
     text-decoration: none 
 }
 
-.header-links-center a:hover {
+.header-links-center a:hover a:focus {
     transition: 0.3s;
     text-decoration: underline;
 }
@@ -92,6 +92,12 @@ a:visited {
     transition-duration: 0.5s;
 }
 
+.nav-icon:focus {
+    filter: invert();
+    transition-duration: 0.5s;
+}
+
+
 a:hover {
     color: #ffffff;
     transition-duration: 0.3s;
@@ -104,6 +110,23 @@ a:hover {
     top: 100%
 }
 
+body, html {
+    height: 100%;
+  }
+  
+.bg {
+    /* The image used */
+    background-image: url("/img/temp_bg.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 
 /* in case I want to add in svg stylings later
 svg {
@@ -111,3 +134,5 @@ svg {
     max-height: 3rem;
     padding-inline: 0.05rem;
 }
+
+
