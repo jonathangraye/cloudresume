@@ -30,6 +30,8 @@ jobs:
       - name: s3syncall
         run: |
             aws s3 sync ${SOURCE_DIR:-.} s3://www.graye.co.uk/ --delete --exclude '.git/*' --exclude '.github/*' --exclude '.editorconfig/*' --exclude '.gitignore'
+            aws s3 sync ${SOURCE_DIR:-.} s3://cv.graye.co.uk/ --delete --exclude '.git/*' --exclude '.github/*' --exclude '.editorconfig/*' --exclude '.gitignore'
+
       - name: cacheInvalidation
         run: |
               aws cloudfront create-invalidation --distribution-id E30YTBKS62BCUP --paths "/*"
