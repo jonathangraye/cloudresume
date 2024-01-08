@@ -1,5 +1,4 @@
-
-/* main page CSS */
+/* CV PAge CSS */     
 
 @media only screen and (max-width: 500px){
     .link-nav-1{ 
@@ -26,9 +25,8 @@ html {
     flex-wrap: wrap;
 }
 
-
 body {
-    background-color: #ffffff;
+    background-color: #636363;
     margin: 0%; 
     height: 100%
 }
@@ -135,14 +133,43 @@ body, html {
     background-size: cover;
   }
 
-  
+.cv-div {
+    background-color: #ffffff   ;
+    display: grid;
+    grid-template-columns: auto;
+    width: 50%;
+    margin: 2rem auto 2rem auto;
+    padding: 4rem;
+    border-style: solid;
+    border-color: #636363;
+    border-top: 0.75rem solid  #000000;
+    box-shadow: rgba(91, 238, 5, 0.25) 0px 4px 8px -2px, rgba(0, 94, 255, 0.08) 0px 0px 0px 1px;
+  }
 
-/* in case I want to add in svg stylings later
-svg {
-    max-width: 3rem;
-    max-height: 3rem;
-    padding-inline: 0.05rem;
+h2 {
+    text-decoration: underline;
+    color: #000000;
+  }
+
+h3 {
+    color: #636363
+  }
+
+p {
+    color: #000000;
+    font-size: 1.8rem;
 }
-*/
 
+.experience {
 
+}
+
+.skills {
+
+}
+
+.education {
+
+}
+.skills {
+}
