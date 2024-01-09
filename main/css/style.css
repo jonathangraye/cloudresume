@@ -167,3 +167,8 @@ li {
 .cv-container {
     border-bottom: 0.1rem solid #636363;
 }
+
+.visit-count {
+    text-align: right;
+    color:#636363
+}

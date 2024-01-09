@@ -10,7 +10,7 @@ async function updateCounter() {
         },
     });
     let data = await response.json();
-    visitCount.innerHTML = `Views: ${data}`;
+    visitCount.innerHTML = `This page has been viewed ${data} times`;
 
 }
 updateCounter();
