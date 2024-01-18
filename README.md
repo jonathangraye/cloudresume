@@ -2,9 +2,9 @@ Hello World!
 
 This is the source code for www.graye.co.uk
 
-This project is get more familliar with AWS services after I passed my solutions architect exam.
+This project is get more familliar with AWS services after I passed my solutions architect and sysops exam exam.
 
-Hope to use this site for lots of things in the the future
+The sites purpose is to serve guests my CV, demonstrate my personal portfolio of work and 
 
 
 List of stuff:

@@ -172,3 +172,21 @@ li {
     text-align: right;
     color:#636363
 }
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 1rem; /* Place the button at the bottom of the page */
+    right: 1.5rem; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; 
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */ 
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.5rem; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #ff00ff; /* Add a dark-grey background on hover */
+  }
