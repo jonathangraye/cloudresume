@@ -19,7 +19,7 @@ async function updateCounter() {
 updateCounter();
 
 
-// BUTTON
+// BUTTON - not my code
 // Get the button:
 let mybutton = document.getElementById("myBtn");
 
