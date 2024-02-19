@@ -24,7 +24,7 @@ body {
     background-color: rgb(25, 76, 74);
     margin: 0%; 
     height: 100%;
-    background-image: url('/main/img/fresh-natural-green-schefflera-arboricola-background.jpg');
+    background-image: url("/img/fresh-natural-green-schefflera-arboricola-background.jpg");
     background-blend-mode: lighten;
     background-repeat: no-repeat;
     background-position: center center;
@@ -134,18 +134,6 @@ body, html {
     height: 100%;
   }
   
-.bg {
-    /* The image used */
-    background-image: url("/img/blackbg.jpg");
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
 .cv-div {
     background-color: #ffffff;
