@@ -1,6 +1,6 @@
 // collapsible tiles
 
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("title-card");
 var i;
 
 for (i = 0; i < coll.length; i++) {
