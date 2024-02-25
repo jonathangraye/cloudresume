@@ -139,7 +139,7 @@ body, html {
     background-color: #ffffff;
     display: grid;
     grid-template-columns: auto;
-    width: 50%;
+    width: 80%;
     margin: 2rem auto 2rem auto;
     padding: 4rem;
     border-style: solid;
@@ -224,6 +224,7 @@ li {
     border: 0.01rem solid #ff66c4;
     cursor: pointer;
     text-align: left;
+    font-size: 3rem;
 }
 .active, .title-card:hover {
     background-color: #000000;
@@ -247,4 +248,3 @@ max-width: 100%;
 h4 {
     text-align: left;
 }
-
