@@ -223,8 +223,8 @@ li {
     color: inherit;
     border: 0.01rem solid #ff66c4;
     cursor: pointer;
-    text-align: left;
-    font-size: 3rem;
+    text-align: center;
+    font-size: 2vw;
 }
 .active, .title-card:hover {
     background-color: #000000;
