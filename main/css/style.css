@@ -121,7 +121,7 @@ a:hover {
     background-color: #ff00ff;
     height: 4rem;
     position: sticky;
-    top: 100%
+    top: 100%;
 }
 .footer-section-links {
     order: 3;
@@ -186,10 +186,12 @@ li {
     color: white; /* Text color */ 
     border-radius: 10px; /* Rounded corners */
     font-size: 1.5rem; /* Increase font size */
+    opacity: 0.6;
   }
   
   #myBtn:hover {
     background-color: #ff00ff; /* Add a cute pink background on hover */
+    opacity: 1;
   }
   
 
@@ -219,7 +221,7 @@ li {
     box-shadow: 0 0.25em 0.5em 0 rgba(255, 255, 255, 0.2);
     transition: 0.4s;
     border-radius: 0.5em;
-    height: 20%;
+    height: 12%;
     color: inherit;
     border: 0.01rem solid #ff66c4;
     cursor: pointer;
@@ -232,10 +234,12 @@ li {
 }
 
 .collapsible-content {
-    padding: 0 18px;
+
     display: none;
     overflow: hidden;  
     background-color: #f1f1f1;
+    width: 70%;
+    text-align: center;
   }
 
  
