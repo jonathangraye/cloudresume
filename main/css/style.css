@@ -212,6 +212,7 @@ li {
   }
 
 .title-card {
+    margin-bottom: 0;
     position: relative;
     width: 70%;
     background-color: #ffffff;
