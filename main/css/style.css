@@ -208,14 +208,14 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 0rem 5rem;
     justify-content: center;
     align-content: center;
-    gap: 2rem 0.6rem;
     height: 60%;
   }
 
 .title-card {
+    margin-bottom: 0;
+    position: relative;
     width: 70%;
     background-color: #ffffff;
     box-shadow: 0 0.25em 0.5em 0 rgba(255, 255, 255, 0.2);
@@ -238,6 +238,8 @@ li {
     display: none;
     overflow: hidden;  
     background-color: #f1f1f1;
+    width: 70%;
+    text-align: center;
     width: 70%;
     text-align: center;
   }

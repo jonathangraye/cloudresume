@@ -1,34 +1,31 @@
-Hello World!
+*Hello World!*
 
 This is the source code for www.graye.co.uk
 
-This project is get more familliar with AWS services after I passed my solutions architect and sysops exam exam.
+The sites main purpose is to serve guests my CV, demonstrate my personal portfolio of work and serve as a central point to link others to my presence on the internet.
 
-The sites purpose is to serve guests my CV, demonstrate my personal portfolio of work and 
+**to do list:**
 
+Terraform whole site
+introduce working contact form
+Introduce music streaming using IceCast server and EC2
+Get noticed by recruiters looking to pay me millions
+Write Tests for my Python Code
+Write a blog post and brag about the site to my peers
 
-List of stuff:
+**Things I've already done:**
 
-to do list:
+Deisgned the site using HTML, CSS and JavaScript
+Routed DNS from a 3rd party domain to AWS using hosted Zones
+hosted the site using S3, served securely via a Cloudfront Distribution
+Utilised DynamoDB and wrote a Python Lambda function to interact with API Gateway and a javascript POST method to 
+Created a GitHub account to host the code.
+Utilised GitHub Actions so that whenever I commit a change to the source code, the website is automatically updated and the cache is invalidated so that clients can be served the newest version of the site.
+Installed Terraform (Have yet to use it though)
 
-Add JS to change colours of Icons
-Create DynamoDB -> Lambda -> API Gateway -> JS chain for updating visitor count
-Add more content to webpage
-Add music to webpage
-add ABOUT section to webpage
-Make pages scrollable and look better on app
-Add footer (smallish)
+**Learning materials I have used.** :
 
-Domain
-
-https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-working-with.html
-names.co.uk
-
-html:
-
-CSS:
-
-miligram:
+Special mentions to Rishab in Cloud for helping out with the Code
 
 https://github.com/milligram/milligram
 
