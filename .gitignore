@@ -5,3 +5,5 @@ node_modules
 dist
 .cache
 main/test.html
+/Users/jonathanstoddart/Docs/git/cloudresume/cloudresume/terraform/.terraform
+**/.terraform/*

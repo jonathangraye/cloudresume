@@ -5,6 +5,16 @@ var i;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
+
+    // here we are gonna loop through the elements
+    for(item of coll){
+      // and remove .active class on the button
+      item.classList.remove("active");
+
+      // here we are checking the next element and making it don't display
+      item.nextElementSibling.style.display = "none";
+    }
+      
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -59,4 +69,4 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+}
