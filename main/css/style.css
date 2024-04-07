@@ -29,7 +29,22 @@ html {
 
 .page-one {
     background-color: white;
-    display: flex;
+}
+
+.page-two {
+    background-color: rgb(95, 95, 95);
+}
+.page-three {
+    background-color: rgb(0, 0, 0);
+}
+
+.full-page {
+    height: 101vh;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0%; 
+    height: 100%;
     background-image: url("/img/fresh-natural-green-schefflera-arboricola-background.jpg");
     background-blend-mode: lighten;
     background-repeat: no-repeat;
