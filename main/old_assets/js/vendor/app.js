@@ -11,7 +11,7 @@ for (i = 0; i < coll.length; i++) {
       // and remove .active class on the button
       item.classList.remove("active");
 
-      // here we are checking the next element and making it don't display
+      // here we are checking the next element and making sure it don't display
       item.nextElementSibling.style.display = "none";
     }
       
