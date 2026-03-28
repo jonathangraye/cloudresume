@@ -1,141 +1,798 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Graye</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Stoddart — IT Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+    :root {
+      --ink:     #111110;
+      --sub:     #6b6b66;
+      --rule:    #e4e4e0;
+      --bg:      #f9f9f7;
+      --white:   #ffffff;
+      --accent:  #1a1a18;
+      --tag-bg:  #efefec;
+      --serif:   'Instrument Serif', Georgia, serif;
+      --sans:    'DM Sans', system-ui, sans-serif;
+      --max:     860px;
+      --gutter:  clamp(1.5rem, 5vw, 3rem);
+    }
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/rejon_Person_Outline_1.svg" alt="" /></span><span class="title">Graye</span>
-								</a>
+    html { font-size: 16px; scroll-behavior: smooth; }
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-						</div>
-					</header>
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(249,249,247,0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sub);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="music.html">Music</a></li>
-							<li><a href="assets/jonathanstoddart_apr_2024.pdf">CV</a></li>
-							<li><a href="about.html">About</a></li>
-						</ul>
-					</nav>
+    /* ── SECTIONS ── */
+    section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem var(--gutter);
+    }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>Hello, I'm Jonathan.<br />
-								Nice to meet you! Welcome to graye.co.uk.</h1>
-								<div class="visit-count"><p>view counter not loaded</p></div>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<a href="music.html">
-										<h2>Music</h2>
-										<div class="content">
-											<p>Check out some of what I've been working on lately!</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<a href="assets/jonathanstoddart_apr_2024.pdf">
-										<h2>CV</h2>
-										<div class="content">
-											<p>Have a look at my CV and see if I'd be a good fit for your organisation.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<a href="about.html">
-										<h2>About(Coming Soon)</h2>
-										<div class="content">
-											<p>A little bit more about this website.</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
+    /* ── HERO ── */
+    #hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: calc(56px + 4rem);
+    }
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sub);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.1s forwards;
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.2s forwards;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--sub);
+    }
+    .hero-bio {
+      max-width: 540px;
+      font-size: 1.05rem;
+      color: var(--sub);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.35s forwards;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.5s forwards;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      background: var(--ink);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-primary:hover { background: #333; border-color: #333; }
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--ink); }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="https://www.instagram.com/jongraye/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/jonathangraye" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:jonathan.stoddart1@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Jonathan Stoddart. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+    .hero-meta {
+      margin-top: 5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.65s forwards;
+    }
+    .meta-item { }
+    .meta-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sub);
+      margin-bottom: 0.25rem;
+    }
+    .meta-value {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
 
-			</div>
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .section-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sub);
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    /* ── EXPERIENCE ── */
+    #experience { border-top: 1px solid var(--rule); }
 
-	</body>
+    .exp-list { display: flex; flex-direction: column; gap: 0; }
+    .exp-item {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-left { }
+    .exp-company {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+    .exp-period {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sub);
+    }
+    .exp-right { }
+    .exp-role {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--sub);
+      margin-bottom: 0.75rem;
+    }
+    .exp-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .exp-points li {
+      font-size: 0.9rem;
+      color: var(--sub);
+      padding-left: 1rem;
+      position: relative;
+    }
+    .exp-points li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rule);
+    }
+    .exp-points li strong { color: var(--ink); font-weight: 500; }
+
+    /* ── SKILLS ── */
+    #skills { border-top: 1px solid var(--rule); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2px;
+    }
+    .skill-group {
+      background: var(--white);
+      padding: 1.75rem;
+      border: 1px solid var(--rule);
+    }
+    .skill-group-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sub);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      background: var(--tag-bg);
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--ink);
+      border-radius: 2px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .certs-row {
+      margin-top: 3rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--rule);
+      background: var(--white);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .cert-badge::before {
+      content: '✓';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 0.6rem;
+      text-align: center;
+      line-height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ── PROJECTS ── */
+    #projects { border-top: 1px solid var(--rule); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .project-card:hover { border-color: #aaa; transform: translateY(-2px); }
+    .project-num {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--sub);
+    }
+    .project-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .project-desc {
+      font-size: 0.88rem;
+      color: var(--sub);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── CONTACT ── */
+    #contact { border-top: 1px solid var(--rule); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-text .section-title { margin-bottom: 1rem; }
+    .contact-tagline {
+      font-size: 1rem;
+      color: var(--sub);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.9rem;
+      transition: padding-left 0.2s;
+    }
+    .contact-link:first-child { border-top: 1px solid var(--rule); }
+    .contact-link:hover { padding-left: 0.5rem; }
+    .contact-link-label { font-weight: 400; }
+    .contact-link-value { font-size: 0.8rem; color: var(--sub); }
+    .contact-link-arrow { color: var(--sub); font-size: 0.8rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem var(--gutter);
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--sub);
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--sub);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--ink); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-meta { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Jonathan Stoddart</a>
+      <ul class="nav-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-label">Senior Technical Support Engineer &amp; Infrastructure Specialist</p>
+    <h1 class="hero-name">Jonathan<br><em>Stoddart</em></h1>
+    <p class="hero-bio">
+      6+ years deploying infrastructure, solving full-stack technical problems, and building tools that scale.
+      Currently at Verkada, providing enterprise-level support for cloud-managed security products across EMEA.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+      <a href="assets/jonathanstoddart_mar_2026.pdf" class="btn-secondary" target="_blank">Download CV</a>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <p class="meta-label">Location</p>
+        <p class="meta-value">United Kingdom</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Current Role</p>
+        <p class="meta-value">Senior TSE, Verkada</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Education</p>
+        <p class="meta-value">BSc Digital Technology Solutions (1st)</p>
+      </div>
+      <div class="meta-item">
+        <p class="meta-label">Available For</p>
+        <p class="meta-value">Freelance &amp; New Roles</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Experience</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-left">
+          <p class="exp-company">Verkada</p>
+          <p class="exp-period">Sep 2024 — Present</p>
+        </div>
+        <div class="exp-right">
+          <p class="exp-role">Senior Technical Support Engineer</p>
+          <ul class="exp-points">
+            <li><strong>Subject Matter Expert for Alarms (EMEA)</strong> — synced with engineering on new features, handled escalations, fielded team questions, and developed training material for new engineers.</li>
+            <li>Performed deep packet capture analysis to resolve endpoint communication issues, advising customers on firewall and network configuration across TCP/IP, UDP, TLS, HTTP, and RTSP.</li>
+            <li>Built an internal tool for testing Verkada API endpoints, letting the support team reproduce customer issues and verify functionality — saving significant engineering time.</li>
+            <li>Root cause troubleshooting of Linux-based hardware (cameras, servers, access points, controllers) using DataDog and Grafana to diagnose issues and proactively identify fleet-wide patterns.</li>
+            <li>Assisted enterprise customers implementing <strong>SSO via Azure, Okta, SAML, OIDC, and SCIM</strong> for identity management.</li>
+            <li>Supported customers integrating <strong>REST APIs</strong> for alerting, streaming, and custom automation with third-party platforms.</li>
+            <li>Contributed to internal and external knowledge bases across 10+ articles; triaged and filed bug reports via Linear and JIRA.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-left">
+          <p class="exp-company">Amazon</p>
+          <p class="exp-period">Sep 2020 — Aug 2024</p>
+        </div>
+        <div class="exp-right">
+          <p class="exp-role">IT Operations Engineer</p>
+          <ul class="exp-points">
+            <li>Led <strong>2 pilot site launches</strong> as on-site build lead — co-ordinating international stakeholders, deploying network and server infrastructure, and delivering a new warehouse management system on time and under budget.</li>
+            <li>Independently designed and deployed a <strong>secure file-sharing service</strong> for the Amazon Apprenticeship team using AWS CloudFormation, IAM, S3, Transfer Family, Lambda, and Secrets Manager.</li>
+            <li>Automated keypad provisioning with Bash scripting, cutting provisioning time by <strong>90%</strong> and sharing the solution across UK fulfilment centres.</li>
+            <li>Wrote IP-to-physical-location tooling using LISP, TCP/IP, and ARP, reducing device search time by <strong>over 50%</strong>.</li>
+            <li>Maintained a <strong>99% SLA</strong> at the busiest UK Amazon site by ticket volume and items shipped.</li>
+            <li>Reduced site energy costs by <strong>over £10,000/year</strong> through access switch consolidation and device utilisation review.</li>
+            <li>Delivered projects across <strong>10+ robotics, sortation, fulfilment, and delivery sites</strong>, including LPR gates and Monitron IoT fault-detection installations.</li>
+            <li>Mentored IT technicians and acted as technical escalation point for complex incidents and projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-left">
+          <p class="exp-company">Xperience Group</p>
+          <p class="exp-period">Jun 2018 — Sep 2020</p>
+        </div>
+        <div class="exp-right">
+          <p class="exp-role">IT Analyst</p>
+          <ul class="exp-points">
+            <li>Migrated organisations from on-premise systems to <strong>Azure and Microsoft 365</strong>, virtualising physical servers to improve reliability and maintaining group policy and security throughout.</li>
+            <li>Proactively monitored backup, network, AV, and patch management systems; worked with clients to ensure infrastructure integrity.</li>
+            <li>Implemented managed backups, Windows Server, and Microsoft Exchange across production environments.</li>
+            <li>Authored <strong>PowerShell scripts</strong> to automate user lifecycle management in Exchange and Active Directory.</li>
+            <li>Advised stakeholders on Microsoft 365 licensing and cost optimisation across 100+ client organisations.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Skills &amp; Certifications</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <p class="skill-group-title">Cloud &amp; AWS</p>
+        <div class="skill-tags">
+          <span class="tag">IAM</span>
+          <span class="tag">EC2</span>
+          <span class="tag">S3</span>
+          <span class="tag">VPC</span>
+          <span class="tag">Lambda</span>
+          <span class="tag">DynamoDB</span>
+          <span class="tag">CloudFormation</span>
+          <span class="tag">Athena</span>
+          <span class="tag">Transfer Family</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Networking</p>
+        <div class="skill-tags">
+          <span class="tag">TCP/IP</span>
+          <span class="tag">DNS / DHCP</span>
+          <span class="tag">VPN</span>
+          <span class="tag">VLAN / Subnetting</span>
+          <span class="tag">Routing Protocols</span>
+          <span class="tag">Cisco</span>
+          <span class="tag">Juniper</span>
+          <span class="tag">Firewalls</span>
+          <span class="tag">Wireshark</span>
+          <span class="tag">ACLs</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Systems &amp; OS</p>
+        <div class="skill-tags">
+          <span class="tag">Linux</span>
+          <span class="tag">Windows Server</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">Azure AD</span>
+          <span class="tag">SCCM</span>
+          <span class="tag">CrowdStrike</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Scripting &amp; Automation</p>
+        <div class="skill-tags">
+          <span class="tag">Bash</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Observability &amp; Logging</p>
+        <div class="skill-tags">
+          <span class="tag">DataDog</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">Opensearch</span>
+          <span class="tag">Chrome DevTools</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-title">Identity &amp; Security</p>
+        <div class="skill-tags">
+          <span class="tag">SAML</span>
+          <span class="tag">OIDC</span>
+          <span class="tag">SCIM</span>
+          <span class="tag">Okta</span>
+          <span class="tag">Azure SSO</span>
+          <span class="tag">Least Privilege</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="certs-row">
+      <span class="cert-badge">AWS Solutions Architect Professional</span>
+      <span class="cert-badge">AWS Solutions Architect Associate</span>
+      <span class="cert-badge">AWS SysOps Administrator</span>
+      <span class="cert-badge">CompTIA Network+</span>
+      <span class="cert-badge">ITIL Foundation</span>
+      <span class="cert-badge">Microsoft MD-102 Endpoint Administrator</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <p class="project-num">01</p>
+        <h3 class="project-title">AWS Cloud Resume Challenge</h3>
+        <p class="project-desc">
+          Designed, built, and deployed graye.co.uk as a fully cloud-hosted resume site following the AWS Cloud Resume Challenge.
+          Implemented a CI/CD pipeline with Terraform and GitHub Actions so any code push automatically deploys to production.
+        </p>
+        <div class="project-stack">
+          <span class="tag">AWS</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">HTML / CSS</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">02</p>
+        <h3 class="project-title">Secure File Sharing Service</h3>
+        <p class="project-desc">
+          Designed and deployed a secure file-sharing platform for the Amazon Apprenticeship team,
+          enabling collaboration with external providers on sensitive survey data — fully documented
+          for use across other Amazon nodes.
+        </p>
+        <div class="project-stack">
+          <span class="tag">CloudFormation</span>
+          <span class="tag">S3</span>
+          <span class="tag">Transfer Family</span>
+          <span class="tag">IAM</span>
+          <span class="tag">Lambda</span>
+          <span class="tag">Secrets Manager</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">03</p>
+        <h3 class="project-title">Verkada API Testing Tool</h3>
+        <p class="project-desc">
+          Built an internal tool for the Verkada support team to monitor and test API endpoint functionality,
+          reducing time spent reproducing customer issues and verifying platform behaviour during incidents.
+        </p>
+        <div class="project-stack">
+          <span class="tag">REST API</span>
+          <span class="tag">Internal Tooling</span>
+          <span class="tag">Support Engineering</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">04</p>
+        <h3 class="project-title">Keypad Provisioning Automation</h3>
+        <p class="project-desc">
+          Identified and automated a recurring provisioning process for Amazon warehouse station keypads
+          using Bash scripting, cutting provisioning time by 90% and sharing the solution across
+          UK fulfilment centres.
+        </p>
+        <div class="project-stack">
+          <span class="tag">Bash</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Device Provisioning</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <div class="section-header" style="margin-bottom: 1rem;">
+          <span class="section-num">04</span>
+          <h2 class="section-title">Contact</h2>
+        </div>
+        <p class="contact-tagline">
+          Open to new roles, freelance infrastructure work, and interesting projects.
+          Feel free to reach out directly.
+        </p>
+        <a href="assets/jonathanstoddart_mar_2026.pdf" class="btn-primary" target="_blank">Download CV</a>
+      </div>
+      <div>
+        <div class="contact-links">
+          <a href="mailto:jonathan.stoddart1@gmail.com" class="contact-link">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value">jonathan.stoddart1@gmail.com</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a href="https://github.com/jonathangraye" target="_blank" class="contact-link">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-value">jonathangraye</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a href="https://www.instagram.com/jongraye/" target="_blank" class="contact-link">
+            <span class="contact-link-label">Instagram</span>
+            <span class="contact-link-value">@jongraye</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" class="contact-link">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">Add your LinkedIn URL</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© 2026 Jonathan Stoddart. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#hero">Top</a></li>
+      <li><a href="assets/jonathanstoddart_mar_2026.pdf" target="_blank">CV</a></li>
+      <li><a href="mailto:jonathan.stoddart1@gmail.com">Email</a></li>
+    </ul>
+  </footer>
+
+</body>
 </html>
